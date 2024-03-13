@@ -1,7 +1,7 @@
 # Assignment-1-Big-Data
 
 
-## Notes to run an the image
+## Notes to run the image
 
 1. run docker build -t {image_name} . ---> to build the docker image, run this command inside the git main repo when you clone it
 2. docker run -it {image_name} ---> runs the container and opens a bash shell inside the container
