@@ -7,3 +7,4 @@
 2. docker run -it {image_name} ---> runs the container and opens a bash shell inside the container
 3. (in the container shell) ---> make sure you're on the /home/doc-bd-a1 directory 
 4. ls to check if the dataset is copied into the container directory
+5. To make sure that the container is running, open another terminal and run docker ps
