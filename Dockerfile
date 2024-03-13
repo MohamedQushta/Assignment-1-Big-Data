@@ -1,27 +1,16 @@
 FROM ubuntu:latest
 
+# Install python and dependencies
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install -y python3 && \
+    apt-get install -y python3-pip
 
-#install python
-RUN apt-get update
-RUN apt-get upgrade -y
-RUN apt-get install -y python3
-# RUN apt-get install python3-pip
-#making a new directory in docker container
+# Set working directory
+WORKDIR /home/doc-bd-a1
 
-
-#install pip
-FROM python:3.8
-RUN -m pip install --upgrade pip
-
-#installing needed libraries
-RUN pip install pandas
-RUN pip install -U scikit-learn
-RUN pip install scipy
-RUN pip install matplotlib
-RUN pip install seaborn
-
-#Copying dataset file
-RUN mkdir -p home/doc-bd-a1
+# Copy dataset file
 COPY bd-a1/StudentsPerformance.csv home/doc-bd-a1
 
-RUN echo "HI"
+# Install necessary libraries
+RUN pip3 install pandas scikit-learn scipy matplotlib seaborn
