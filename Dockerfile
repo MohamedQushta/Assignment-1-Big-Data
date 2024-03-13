@@ -10,7 +10,10 @@ RUN apt-get update && \
 WORKDIR /home/doc-bd-a1
 
 # Copy dataset file
-COPY bd-a1/StudentsPerformance.csv home/doc-bd-a1
+COPY bd-a1/StudentsPerformance.csv /home/doc-bd-a1
 
 # Install necessary libraries
 RUN pip3 install pandas scikit-learn scipy matplotlib seaborn
+
+# Open bash shell
+# CMD ["bin/bash"]
