@@ -18,7 +18,7 @@ if __name__ == "__main__":
     summary_stats = df.describe()
 
     # Save the output to a text file
-    with open("summary_statistics.txt", "w") as f:
+    with open("service-result/summary_statistics.txt", "w") as f:
         f.write("Summary Statistics:\n")
         f.write(str(summary_stats))
     
@@ -31,7 +31,7 @@ if __name__ == "__main__":
     # Identify outliers based on the threshold
     outliers = (z_scores > z_score_threshold) | (z_scores < -z_score_threshold)
 
-    with open("outliers_z_score.txt", "w") as f:
+    with open("service-result/outliers_z_score.txt", "w") as f:
         f.write("Outliers Detected using Z-Score (Threshold = {}):\n\n".format(z_score_threshold))
         for col in outliers.columns:
             f.write("Column: {}\n".format(col))
@@ -62,7 +62,7 @@ if __name__ == "__main__":
 
     
     # Save the results to a text file
-    with open("correlation_analysis.txt", "w") as f:
+    with open("service-result/correlation_analysis.txt", "w") as f:
         f.write("Correlation Analysis:\n\n")
 
         f.write("Positively Correlated Variables:\n")
@@ -76,7 +76,7 @@ if __name__ == "__main__":
     
     genderCount = df['gender'].value_counts()
     lunchCount = df['lunch'].value_counts()
-    with open("count_results.txt", "w") as f:
+    with open("service-result/count_results.txt", "w") as f:
         f.write("Lunch Count:\n")
         f.write(str(lunchCount) + "\n\n")
 

@@ -111,5 +111,5 @@ if __name__ == "__main__":
     #df = discretize_data(df)
     
     # Save the resulting DataFrame as a new CSV file
-    save_to_csv(df, "res_dpre.csv")
-    run_eda("res_dpre.csv")
+    save_to_csv(df, "service-result/res_dpre.csv")
+    run_eda("service-result/res_dpre.csv")

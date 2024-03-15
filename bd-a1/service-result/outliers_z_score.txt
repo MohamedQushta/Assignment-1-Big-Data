@@ -1,0 +1,26 @@
+Outliers Detected using Z-Score (Threshold = 3):
+
+Column: gender
+Column: lunch
+Column: test preparation course
+Column: math score
+    - Row 17: Z-Score = -3.17
+    - Row 59: Z-Score = -4.36
+    - Row 787: Z-Score = -3.11
+    - Row 980: Z-Score = -3.83
+Column: reading score
+    - Row 59: Z-Score = -3.57
+    - Row 327: Z-Score = -3.16
+    - Row 596: Z-Score = -3.09
+    - Row 980: Z-Score = -3.09
+Column: writing score
+    - Row 59: Z-Score = -3.82
+    - Row 76: Z-Score = -3.03
+    - Row 327: Z-Score = -3.23
+    - Row 596: Z-Score = -3.49
+Column: GPA
+    - Row 59: Z-Score = -4.12
+    - Row 327: Z-Score = -3.12
+    - Row 596: Z-Score = -3.14
+    - Row 980: Z-Score = -3.47
+Column: above average

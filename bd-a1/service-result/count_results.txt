@@ -1,0 +1,12 @@
+Lunch Count:
+lunch
+1    645
+0    355
+Name: count, dtype: int64
+
+Gender Count:
+gender
+1    518
+0    482
+Name: count, dtype: int64
+

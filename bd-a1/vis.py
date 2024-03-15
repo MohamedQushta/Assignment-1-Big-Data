@@ -40,7 +40,7 @@ if __name__ == "__main__":
     plt.tight_layout()
 
     # Save the visualization as vis.png
-    plt.savefig('vis.png')
+    plt.savefig('service-result/vis.png')
 
 
     fig, axes = plt.subplots(1, 3, figsize=(25, 6))
@@ -77,7 +77,7 @@ if __name__ == "__main__":
     plt.tight_layout()
 
     # Save the visualization as vis2.png
-    plt.savefig('vis2.png')
+    plt.savefig('service-result/vis2.png')
 
 
 

@@ -1,0 +1,17 @@
+Correlation Analysis:
+
+Positively Correlated Variables:
+    - gender: reading score (0.24), writing score (0.30), GPA (0.13), above average (0.11)
+    - lunch: math score (0.35), reading score (0.23), writing score (0.25), GPA (0.29), above average (0.22)
+    - test preparation course: math score (0.18), reading score (0.24), writing score (0.31), GPA (0.26), above average (0.22)
+    - math score: lunch (0.35), test preparation course (0.18), reading score (0.82), writing score (0.80), GPA (0.92), above average (0.73)
+    - reading score: gender (0.24), lunch (0.23), test preparation course (0.24), math score (0.82), writing score (0.95), GPA (0.97), above average (0.78)
+    - writing score: gender (0.30), lunch (0.25), test preparation course (0.31), math score (0.80), reading score (0.95), GPA (0.97), above average (0.77)
+    - GPA: gender (0.13), lunch (0.29), test preparation course (0.26), math score (0.92), reading score (0.97), writing score (0.97), above average (0.80)
+    - above average: gender (0.11), lunch (0.22), test preparation course (0.22), math score (0.73), reading score (0.78), writing score (0.77), GPA (0.80)
+
+Negatively Correlated Variables:
+    - gender: lunch (-0.02), test preparation course (-0.01), math score (-0.17)
+    - lunch: gender (-0.02), test preparation course (-0.02)
+    - test preparation course: gender (-0.01), lunch (-0.02)
+    - math score: gender (-0.17)
