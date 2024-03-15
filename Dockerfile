@@ -13,7 +13,7 @@ WORKDIR /home/doc-bd-a1
 COPY bd-a1/StudentsPerformance.csv /home/doc-bd-a1
 
 # Install necessary libraries
-RUN pip3 install pandas scikit-learn scipy matplotlib seaborn
+RUN pip3 install pandas numpy scikit-learn scipy matplotlib seaborn
 
 # Open bash shell
 # CMD ["bin/bash"]
