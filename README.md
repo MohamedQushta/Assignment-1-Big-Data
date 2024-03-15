@@ -9,6 +9,32 @@
 4. ls to check if the dataset is copied into the container directory
 5. To make sure that the container is running, open another terminal and run docker ps
 
-**I just finished the shell script and it copies the directory with the path /home/doc-bd-a1/service_results to the working directory in the main git repo**
 
-- [ ] create a directory in the container with the path specified to hold all the text files and visualizations generated from the python files 
+## Project Execution
+
+1. Running the container using our working directory as a volume to use python files
+
+![screenshot 1](screenshots/running-container-with-volume.png)
+
+2. making the reports folder and starting the execution pipeline inside the container
+
+![screenshot 2](screenshots/python-exec.png)
+
+3. executing the shell script to copy the results to the local machine
+
+![screenshot 3](screenshots/script-exec.png)
+
+
+## All docker commands used
+
+* docker build --> to build the image from the Dockerfile
+
+* docker cp 
+    * to copy the dataset file to the image in the build phase
+    * to copy the results from the container to the local machine in the execution phase (using the shell script)
+
+* docker ps --> to show the our running container
+
+* docker run -v --> to run the container using a volume on the local machine to use the python files
+
+* docker stop {container_id} --> to stop the running container (used in the shell script to stop the running container after copying the result to the local machine)
