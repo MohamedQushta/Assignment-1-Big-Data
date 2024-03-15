@@ -32,17 +32,17 @@ def transform_data(df):
     #         df[column] = df[column].apply(lambda x: math.log(x) if x > 0 else 0)
 
     #Creating "GPA" and "above average" columns 
-    df['gender'] = df['gender'].replace({'male':0, 'female':1}).infer_objects(copy=False)
-    # Replace values in the "lunch" column
-    df['lunch'] = df['lunch'].replace({'standard': 1, 'free/reduced': 0}).infer_objects(copy=False)
-    # Replace values in the "lunch" column
-    df['test preparation course'] = df['test preparation course'].replace({'completed': 1, 'none': 0}).infer_objects(copy=False)
+    df['gender'] = df['gender'].map({'male': 0, 'female': 1})
+    df['lunch'] = df['lunch'].map({'standard': 1, 'free/reduced': 0})
+    df['test preparation course'] = df['test preparation course'].map({'completed': 1, 'none': 0})
 
-    df["GPA"]=round((df["math score"]+df["reading score"]+df["writing score"])/3,2)
-    Avg_score = df['GPA'].mean()
-    df['above average']= np.where(df['GPA']>Avg_score,'above','below')
-    df['above average'] = df['above average'].replace({'above': 1, 'below': 0}).infer_objects(copy=False)
-    df = pd.get_dummies(df)
+    df["GPA"] = round((df["math score"] + df["reading score"] + df["writing score"]) / 3, 2)
+
+    avg_score = df['GPA'].mean()
+
+    df['above average'] = np.where(df['GPA'] > avg_score, 1, 0)
+
+    df = pd.get_dummies(df) 
 
     return df
 
@@ -85,7 +85,7 @@ def save_to_csv(df, file_path):
     df.to_csv(file_path, index=False)
 
 def run_eda(file_path):
-    subprocess.run(["python", "eda.py", file_path])
+    subprocess.run(["python3", "eda.py", file_path])
 
 if __name__ == "__main__":
     # Check if the file path is provided as an argument

@@ -83,4 +83,4 @@ if __name__ == "__main__":
         f.write("Gender Count:\n")
         f.write(str(genderCount) + "\n\n")
     
-    subprocess.run(["python", "vis.py", file_path])
+    subprocess.run(["python3", "vis.py", file_path])

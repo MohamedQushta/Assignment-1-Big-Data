@@ -10,7 +10,7 @@ def process_data_frame(file_path):
     print("DataFrame shape:", df.shape)
     print("DataFrame columns:", df.columns)
     # Pass the DataFrame path to the next Python file for further processing
-    subprocess.run(["python", "dpre.py", file_path])
+    subprocess.run(["python3", "dpre.py", file_path])
 
 if __name__ == "__main__":
     # Check if the file path is provided as an argument
