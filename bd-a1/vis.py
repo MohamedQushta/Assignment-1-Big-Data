@@ -81,4 +81,4 @@ if __name__ == "__main__":
 
 
 
-    subprocess.run(["python", "model.py", file_path])
+    subprocess.run(["python3", "model.py", file_path])
